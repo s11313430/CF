@@ -8,10 +8,25 @@ import { SymptomsPage } from '../symptoms/symptoms';
 })
 export class Symptoms2Page {
 
+  public symptom;
+  public visitDateTime;
+
   constructor(public navCtrl: NavController) {
   }
   goToSymptoms(params){
     if (!params) params = {};
     this.navCtrl.push(SymptomsPage);
+  }
+
+  ngAfterViewInit() {
+    let gotItem ;
+    gotItem = localStorage.getItem('symptoms');
+
+    gotItem =  JSON.parse(gotItem);
+
+    this.symptom = gotItem.symptom;
+    this.visitDateTime = gotItem.symptomdatetime;
+
+
   }
 }

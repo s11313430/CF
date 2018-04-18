@@ -8,21 +8,18 @@
 <ion-content padding id="page11" style="background-color:#D495DA;">
   <div class="spacer" style="width:300px;height:42px;" id="symptoms-spacer15"></div>
   <form id="symptoms-form5">
-    <ion-item id="symptoms-input16">
-      <ion-label></ion-label>
-      <ion-input type="text" placeholder="Date"></ion-input>
-    </ion-item>
-    <ion-item id="symptoms-input17">
-      <ion-label></ion-label>
-      <ion-input type="text" placeholder="Time"></ion-input>
-    </ion-item>
-    <ion-item id="symptoms-input18">
-      <ion-label></ion-label>
-      <ion-input type="text" placeholder="Symptoms Observed"></ion-input>
-    </ion-item>
+    <ion-list>
+      <ion-item>
+          <input #symptomDateTime label="SymptomDate" type="datetime-local"  placeholder="Date" >
+      </ion-item>
+      <ion-item>
+          <input #symptom label="Symptom" type="text"  placeholder="Symptoms observed" >
+      </ion-item>
+      
+    </ion-list>  
   </form>
   <div class="spacer" style="width:300px;height:46px;" id="symptoms-spacer14"></div>
-  <button id="symptoms-button14" ion-button color="royal" block large>
+  <button id="symptoms-button14" ion-button color="royal" block large on-click='addSymptom()'>
     <ion-icon name="add"></ion-icon>
     Add
   </button>

@@ -7,25 +7,10 @@
 </ion-header>
 <ion-content padding id="page15" style="background-color:#D092E2;">
   <ion-list id="symptoms2-list8">
-    <ion-item id="symptoms2-list-item-container11">
-      <div id="symptoms2-markdown31" class="show-list-numbers-and-dots">
-        <p style="margin-top:0px;color:#000000;">
-          Symptom Observed
-        </p>
-      </div>
-      <div id="symptoms2-markdown32" class="show-list-numbers-and-dots">
-        <p style="margin-top:0px;color:#000000;">
-          Date
-        </p>
-      </div>
-      <div id="symptoms2-markdown35" class="show-list-numbers-and-dots">
-        <p style="margin-top:0px;color:#000000;">
-          Time
-        </p>
-      </div>
-      <div id="symptoms2-markdown36" class="show-list-numbers-and-dots"></div>
-      <div id="symptoms2-markdown37" class="show-list-numbers-and-dots"></div>
-    </ion-item>
+    <ion-item >
+      Date and Time: {{symptomDateTime}}<br>
+      Symptom: {{symptom}} <br>
+      </ion-item>
   </ion-list>
   <div class="spacer" style="width:300px;height:165px;" id="symptoms2-spacer17"></div>
   <button id="symptoms2-button17" ion-button color="royal" block large on-click="goToSymptoms()">

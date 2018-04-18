@@ -7,28 +7,26 @@
 </ion-header>
 <ion-content padding id="page8" style="background-color:#CE97DF;">
   <form id="medication2-form2">
-    <div class="spacer" style="width:300px;height:65px;" id="medication2-spacer9"></div>
-    <ion-item id="medication2-input3">
-      <ion-label>
-        Medicine name
-      </ion-label>
-      <ion-input type="text" placeholder=""></ion-input>
-    </ion-item>
-    <ion-item id="medication2-input4">
-      <ion-label>
-        Dosage
-      </ion-label>
-      <ion-input type="text" placeholder=""></ion-input>
-    </ion-item>
-    <ion-item id="medication2-input5">
-      <ion-label>
-        Time
-      </ion-label>
-      <ion-input type="text" placeholder=""></ion-input>
-    </ion-item>
-    <div class="spacer" style="height:100px;" id="medication2-spacer10"></div>
+    <ion-list>
+      <ion-item>
+          <input #medName label="MedName" type="text"  placeholder="Medicine Name" >
+      </ion-item>
+      
+      <ion-item>
+          <label>
+              Daily Dosage
+            </label>
+            <select #Dosage label="Dosage" placeholder="Dosage"> 
+            <option>Once</option>
+            <option>Twice</option>
+            <option>Thrice</option>
+            <option>Four times</option>
+            </select>
+      </ion-item>
+      
+    </ion-list>  
   </form>
-  <button id="medication2-button11" ion-button color="royal" block large>
+  <button id="medication2-button11" ion-button color="royal" block large on-click="addMedicines()">
     <ion-icon name="add"></ion-icon>
     Add
   </button>
